@@ -5,7 +5,7 @@ public class Tabeller {
 	// a)
 	public static void skrivUt(int[] tabell) {
 
-		for (int i = 0; i<tabell.length; i++){
+		for (int i = 0; i < tabell.length; i++) {
 			System.out.println(tabell[i]);
 		}
 	}
@@ -30,7 +30,14 @@ public class Tabeller {
 	public static boolean finnesTall(int[] tabell, int tall) {
 
 		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
+		for (int i = 0; i < tabell.length; i++) {
+
+			if (tabell[i] == tall) {
+				return true;
+			}
+
+		}
+		return false;
 
 	}
 
@@ -58,7 +65,14 @@ public class Tabeller {
 	public static boolean erSortert(int[] tabell) {
 
 		// TODO
-		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
+		for (int i = 1; i < tabell.length; i++) {
+
+			if (tabell[i] < tabell[i-1]) {
+				return false;
+			}
+
+		}
+		return true;
 	}
 
 	// h)
