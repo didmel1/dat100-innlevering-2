@@ -12,18 +12,29 @@ public class Tabeller {
 
 	// b)
 	public static String tilStreng(int[] tabell) {
-		String tekst = "";
-		for (int i = 0; i < tabell.length; i++) {
-			tekst = tekst + tabell[i];
+
+		String ord = "[";
+
+		for (int tall = 0; tall < tabell.length; tall++){
+			ord = ord + tabell[tall];
+
+			if (tall < tabell.length - 1){
+				ord = ord + ",";
+			}
+
 		}
-        return tekst;
-    }
+		ord = ord + "]";
+		System.out.print(ord);
+		return ord;
+	}
 
 	// c)
 	public static int summer(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+		int sum = 0;
+		for (int i = 0; i < tabell.length; i++){
+			sum = sum + tabell[i];
+		}
+		return sum;
 	}
 
 	// d)
@@ -57,8 +68,13 @@ public class Tabeller {
 	// f)
 	public static int[] reverser(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden reverser ikke implementert");
+		int[] reversert = new int[tabell.length];
+		int j = 0;
+		for(int i=tabell.length -1; i >= 0; i--) {
+			reversert[j] = tabell[i];
+			j++;
+		}
+		return reversert;
 	}
 
 	// g)
